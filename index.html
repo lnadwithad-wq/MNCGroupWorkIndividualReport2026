@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Groupwork Reflection Report</title>
+
+
+  <!-- Google Fonts: Princess Sofia & Nunito -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;1,400&family=Princess+Sofia&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+  <!-- Sparkle Cursor & Glitter Gold / Pastel Mist Transition Canvas -->
+  <canvas id="sparkle-canvas"></canvas>
+
+
+  <!--  Pink-Line Icon Menu (Hidden on Welcome Screen, or visible always if you prefer) -->
+  <nav class="sleek-menu" id="top-menu">
+
+
+    <!-- My Role (Feather Quill Icon) -->
+    <button class="menu-icon-btn" data-section="0" aria-label="My Role">
+      <svg viewBox="0 0 24 24">
+        <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z" />
+        <line x1="16" y1="8" x2="2" y2="22" />
+        <line x1="17.5" y1="15" x2="9" y2="15" />
+      </svg>
+      <span class="menu-tooltip">My Role</span>
+    </button>
+
+
+    <!--  My Feelings (Heart Icon) -->
+    <button class="menu-icon-btn" data-section="1" aria-label="My Thoughts and Feelings">
+      <svg viewBox="0 0 24 24">
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+      </svg>
+      <span class="menu-tooltip">My Feelings</span>
+    </button>
+
+
+    <!-- Teamwork (Bow / Ribbon Icon) -->
+    <button class="menu-icon-btn" data-section="2" aria-label="Teamwork and Collaboration">
+      <svg viewBox="0 0 24 24">
+        <path d="M12 12C9 8.5 4 7 4 11.5S9 15 12 12zm0 0c3-3.5 8-5 8-.5S15 15 12 12z" />
+        <path d="M12 12l-3.5 8M12 12l3.5 8" />
+        <circle cx="12" cy="12" r="1.5" />
+      </svg>
+      <span class="menu-tooltip">Teamwork</span>
+    </button>
+
+
+    <!-- Skills Learned(Open Book & Star Icon) -->
+    <button class="menu-icon-btn" data-section="3" aria-label="Skills and Lessons">
+      <svg viewBox="0 0 24 24">
+        <path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2z" />
+        <path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z" />
+      </svg>
+      <span class="menu-tooltip">Skills Learned</span>
+    </button>
+
+
+    <!-- Takeaways(4-Point Sparkle Star Icon) -->
+    <button class="menu-icon-btn" data-section="4" aria-label="What I'd Do Differently">
+      <svg viewBox="0 0 24 24">
+        <path d="M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6L12 2Z" />
+      </svg>
+      <span class="menu-tooltip">Takeaways</span>
+    </button>
+  </nav>
+
+
+  <!-- ==================== 1. WELCOME PAGE ==================== -->
+  <section id="welcome-screen" class="screen active">
+    <!-- Floating Welcome Box using your own designed image -->
+    <div class="welcome-box">
+      <h1 class="welcome-line-1">Welcome!</h1>
+      <p class="welcome-line-2">Click open the door to continue!</p>
+    </div>
+
+
+    <!-- Invisible Clickable Area Directly Over Your Door -->
+    <div id="door-hotspot" class="door-hotspot" title="Click to enter"></div>
+  </section>
+
+
+  <!-- ==================== 2. ROOM GALLERY PAGE ==================== -->
+  <section id="room-screen" class="screen">
+    <div class="gallery-wall">
+
+
+      <!-- Photo 1: My Role -->
+      <div class="gallery-item item-1" data-section="0">
+        <div class="painting-wrap">
+          <img src="assets/frame-1.png" alt="My Role" class="painting-img" />
+        </div>
+        <div class="label-plaque">
+          <span class="label-text">My Role</span>
+        </div>
+      </div>
+
+
+      <!-- Photo 2: My Thoughts and Feelings -->
+      <div class="gallery-item item-2" data-section="1">
+        <div class="painting-wrap">
+          <img src="assets/frame-2.jpg" alt="My Thoughts and Feelings" class="painting-img" />
+        </div>
+        <div class="label-plaque">
+          <span class="label-text">My Feelings</span>
+        </div>
+      </div>
+
+
+      <!-- Photo 3: Teamwork and Collaboration -->
+      <div class="gallery-item item-3" data-section="2">
+        <div class="painting-wrap">
+          <img src="assets/frame-3.png" alt="Teamwork and Collaboration" class="painting-img" />
+        </div>
+        <div class="label-plaque">
+          <span class="label-text">Collaboration</span>
+        </div>
+      </div>
+
+
+      <!-- Photo 4: Skills and Lessons -->
+      <div class="gallery-item item-4" data-section="3">
+        <div class="painting-wrap">
+          <img src="assets/frame-4.jpg" alt="Skills and Lessons" class="painting-img" />
+        </div>
+        <div class="label-plaque">
+          <span class="label-text">Skills Gained</span>
+        </div>
+      </div>
+
+
+      <!-- Photo 5: What I'd Do Differently -->
+      <div class="gallery-item item-5" data-section="4">
+        <div class="painting-wrap">
+          <img src="assets/frame-5.png" alt="What I'd Do Differently" class="painting-img" />
+        </div>
+        <div class="label-plaque">
+          <span class="label-text">Takeaways</span>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+
+<!-- ==================== 3. MAILBOX & SLIDE DECK OVERLAY ==================== -->
+  <div id="modal-overlay" class="modal-overlay">
+
+<!-- Mail Notification Prompt -->
+    <div id="mail-notification" class="mail-notification">
+      Click the mailbox!
+    </div>
+    <!-- STEP A: Clickable Mailbox (Uses your assets/mailbox.png, with a fallback SVG envelope if not added yet) -->
+    <div id="mailbox-stage" class="mailbox-stage" title="Click to open mail">
+      <img
+        src="assets/mailboxclose.jpg"
+        alt="Open Mail"
+        id="mailbox-img"
+        class="mailbox-img"
+        onerror="this.style.display='none'; document.getElementById('mailbox-fallback').style.display='flex';"
+      />
+      <!-- Fallback Coquette Envelope (Only shows if assets/mailbox.png isn't found) -->
+      <div id="mailbox-fallback" class="mailbox-fallback" style="display: none;">
+        <svg viewBox="0 0 320 220" class="fallback-envelope-svg">
+          <rect x="10" y="10" width="300" height="200" rx="14" fill="#faf3eb" stroke="#d4af37" stroke-width="2" />
+          <path d="M10 10 L160 125 L310 10" fill="#f4d4dc" stroke="#d4af37" stroke-width="2" />
+          <path d="M10 210 L115 115 M310 210 L205 115" stroke="#d98a9c" stroke-width="1.5" opacity="0.6" />
+          <circle cx="160" cy="120" r="22" fill="#d98a9c" stroke="#fff3c4" stroke-width="2" />
+          <path d="M160 108 L164 116 L172 120 L164 124 L160 132 L156 124 L148 120 L156 116 Z" fill="#fff3c4" />
+        </svg>
+      </div>
+    </div>
+
+
+    <!-- STEP B: Book Flip / Android Swipe Slide Deck -->
+    <div id="deck-stage" class="deck-stage">
+
+
+      <!-- Icon-Only Close Button -->
+      <button id="close-deck-btn" class="icon-action-btn close-btn" aria-label="Close">
+        <svg viewBox="0 0 24 24">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+
+
+      <!-- Icon-Only Previous Slide Arrow -->
+      <button id="prev-slide-btn" class="icon-action-btn nav-arrow prev-arrow" aria-label="Previous">
+        <svg viewBox="0 0 24 24">
+          <polyline points="15 18 9 12 15 6" />
+        </svg>
+      </button>
+
+
+      <!-- 3D Book & Swipe Viewport -->
+      <div id="deck-viewport" class="deck-viewport">
+
+
+        <!-- ================= DECK 1: MY ROLE ================= -->
+        <div class="deck-group deck-1" data-deck="0">
+          <div class="slide-card">
+            <div class="slide-section-tag">My Role</div>
+            <h2 class="slide-title">Scriptwriting and Recording</h2>
+            <div class="slide-divider"></div>
+            <p class="slide-body">
+              My responsibilities included writing the script and recording myself presenting in front of the camera. These were relatively straightforward, as I was already comfortable speaking English.
+            </p>
+          </div>
+
+
+          <div class="slide-card">
+            <div class="slide-section-tag">My Role</div>
+            <h2 class="slide-title">Video Editing</h2>
+            <div class="slide-divider"></div>
+            <p class="slide-body">
+              This was the most challenging part because I had never edited a video before. I had to learn almost everything from scratch by watching YouTube and TikTok tutorials, trying out different effects and gradually figuring out my own editing workflow.
+            </p>
+          </div>
+
+
+          <div class="slide-card">
+            <div class="slide-section-tag">My Role</div>
+            <h2 class="slide-title">Working with Bao</h2>
+            <div class="slide-divider"></div>
+            <p class="slide-body">
+              After spending many hours editing my section, I received some help from Bao, who further improved the audio quality of my recording. His help made the final product better.
+            </p>
+          </div>
+        </div>
+
+
+        <!-- ================= DECK 2: MY THOUGHTS AND FEELINGS ================= -->
+        <div class="deck-group deck-2" data-deck="1">
+          <div class="slide-card">
+            <div class="slide-section-tag">My Feelings</div>
+            <h2 class="slide-title">Excitement and Curiosity</h2>
+            <div class="slide-divider"></div>
+            <p class="slide-body">
+              Initially, I was excited about making a video essay because it was something different from the usual PowerPoint presentations we were used to.
+            </p>
+          </div>
+
+
+          <div class="slide-card">
+            <div class="slide-section-tag">My Feelings</div>
+            <h2 class="slide-title">Feeling Overwhelmed</h2>
+            <div class="slide-divider"></div>
+            <p class="slide-body">
+              However, I soon realized how much work was involved. I was particularly overwhelmed when I started editing because I had very little technical knowledge. The lack of a shared editing theme also made things more difficult, as everyone's videos ended up looking quite different.
+            </p>
+          </div>
+
+
+          <div class="slide-card">
+            <div class="slide-section-tag">My Feelings</div>
+            <h2 class="slide-title">Concern for My Teammates</h2>
+            <div class="slide-divider"></div>
+            <p class="slide-body">
+              I was also concerned when Khoi initially wanted to take on almost all the editing responsibilities. Although I appreciated his enthusiasm, I didn't think it was reasonable for one person to carry such a heavy workload. I was glad that we managed to discuss this and encourage everyone to contribute.
+            </p>
+          </div>
+
+
+          <div class="slide-card">
+            <div class="slide-section-tag">My Feelings</div>
+            <h2 class="slide-title">Exhaustion and Achievement</h2>
+            <div class="slide-divider"></div>
+            <p class="slide-body">
+              Towards the end, I was extremely exhausted after spending tens of hours editing and eventually pulling an all-nighter. Nevertheless, finishing my section gave me a strong sense of satisfaction and achievement. I was especially proud that I had managed to learn something completely new and contribute to the group's final product.
+            </p>
+          </div>
+        </div>
+
+
+        <!-- ================= DECK 3: TEAMWORK AND COLLABORATION ================= -->
+        <div class="deck-group deck-3" data-deck="2">
+          <div class="slide-card">
+            <div class="slide-section-tag">Teamwork</div>
+            <h2 class="slide-title">Communication</h2>
+            <div class="slide-divider"></div>
+            <p class="slide-body">
+              We mainly communicated through face-to-face discussions during class and our group chat. These were where we exchanged ideas, discussed arrangements and coordinated our work.
+            </p>
+          </div>
+
+
+          <div class="slide-card">
+            <div class="slide-section-tag">Teamwork</div>
+            <h2 class="slide-title">Decision-making</h2>
+            <div class="slide-divider"></div>
+            <p class="slide-body">
+              Initially, we discussed different opinions and tried to reach compromises. However, once we started producing the video, we became more flexible and adjusted our plans as we went along. Since none of us had much experience with video production, we often had to figure things out along the way.
+            </p>
+          </div>
+
+
+          <div class="slide-card">
+            <div class="slide-section-tag">Teamwork</div>
+            <h2 class="slide-title">Different Contributions</h2>
+            <div class="slide-divider"></div>
+            <p class="slide-body">
+              Not everyone contributed in exactly the same way or to the same extent. I think this was partly due to the nature of the project, as not everyone was equally comfortable speaking English in front of a camera or had the technical skills needed for editing. We therefore took on different responsibilities based on our individual strengths and abilities.
+            </p>
+          </div>
+
+
+          <div class="slide-card">
+            <div class="slide-section-tag">Teamwork</div>
+            <h2 class="slide-title">Coordination Challenges</h2>
+            <div class="slide-divider"></div>
+            <p class="slide-body">
+              Our collaboration wasn't always smooth. We experienced delays, unclear responsibilities and differences in editing styles. In particular, we hadn't properly discussed the overall visual direction or agreed on the workload beforehand.
+            </p>
+          </div>
+
+
+          <div class="slide-card">
+            <div class="slide-section-tag">Teamwork</div>
+            <h2 class="slide-title">Overall Experience</h2>
+            <div class="slide-divider"></div>
+            <p class="slide-body">
+              Despite these difficulties, I had a positive experience working with my teammates. Everyone eventually contributed in their own way, and I appreciated the fact that we managed to complete something quite ambitious despite our limited experience.
+            </p>
+          </div>
+        </div>
+
+
+        <!-- ================= DECK 4: SKILLS AND LESSONS ================= -->
+        <div class="deck-group deck-4" data-deck="3">
+          <div class="slide-card">
+            <div class="slide-section-tag">Skills Learned</div>
+            <h2 class="slide-title">Technical Skills</h2>
+            <div class="slide-divider"></div>
+            <p class="slide-body">
+              The most obvious skill I gained was video editing. Through online tutorials and repeated experimentation, I became familiar with different editing techniques, audio synchronization, transitions and visual effects.
+            </p>
+          </div>
+
+
+          <div class="slide-card">
+            <div class="slide-section-tag">Skills Learned</div>
+            <h2 class="slide-title">Self-directed Learning</h2>
+            <div class="slide-divider"></div>
+            <p class="slide-body">
+              I also learned how to teach myself something completely unfamiliar. I realized that I didn't necessarily need to know how to do something beforehand; I could gradually develop the necessary skills through research, practice and experimentation.
+            </p>
+          </div>
+
+
+          <div class="slide-card">
+            <div class="slide-section-tag">Skills Learned</div>
+            <h2 class="slide-title">Teamwork and Coordination</h2>
+            <div class="slide-divider"></div>
+            <p class="slide-body">
+              I learned that simply dividing tasks among members isn't enough to ensure effective collaboration. We also need to agree on the overall direction, set clear expectations and make sure that everyone's contributions fit together.
+            </p>
+          </div>
+        </div>
+
+
+        <!-- ================= DECK 5: WHAT I'D DO DIFFERENTLY ================= -->
+        <div class="deck-group deck-5" data-deck="4">
+          <div class="slide-card">
+            <div class="slide-section-tag">Takeaways</div>
+            <h2 class="slide-title">Agree on a Common Direction</h2>
+            <div class="slide-divider"></div>
+            <p class="slide-body">
+              If I could do this project again, I'd suggest agreeing on a common visual theme and editing style before everyone started working on their individual sections. This would help us produce a more consistent final video.
+            </p>
+          </div>
+
+
+          <div class="slide-card">
+            <div class="slide-section-tag">Takeaways</div>
+            <h2 class="slide-title">Plan and Divide Work Better</h2>
+            <div class="slide-divider"></div>
+            <p class="slide-body">
+              I'd also encourage the group to clarify everyone's responsibilities, discuss individual availability and set intermediate deadlines instead of leaving too much work until the final week.
+            </p>
+          </div>
+
+
+          <div class="slide-card">
+            <div class="slide-section-tag">Takeaways</div>
+            <h2 class="slide-title">Prepare Better Equipment</h2>
+            <div class="slide-divider"></div>
+            <p class="slide-body">
+              On my part, I'd prepare better recording equipment, particularly a proper microphone. Recording in the library using my laptop camera wasn't ideal, and the audio quality could have been much better.
+            </p>
+          </div>
+
+
+          <div class="slide-card">
+            <div class="slide-section-tag">Takeaways</div>
+            <h2 class="slide-title">Allow More Time to Learn</h2>
+            <div class="slide-divider"></div>
+            <p class="slide-body">
+              I'd also set aside more time to learn the necessary editing techniques instead of figuring everything out under considerable time pressure.
+            </p>
+          </div>
+
+
+          <div class="slide-card">
+            <div class="slide-section-tag">5. What I'd Do Differently</div>
+            <h2 class="slide-title">Apply These Lessons to Other Subjects</h2>
+            <div class="slide-divider"></div>
+            <p class="slide-body">
+              I think these lessons go beyond video production. Whether we're working on financial analysis, business case studies or presentations, we should establish a shared understanding of the final deliverable, divide responsibilities clearly and make sure individual contributions come together into a coherent final product.
+            </p>
+          </div>
+        </div>
+
+
+      </div>
+
+
+      <!-- Icon-Only Next Slide Arrow -->
+      <button id="next-slide-btn" class="icon-action-btn nav-arrow next-arrow" aria-label="Next">
+        <svg viewBox="0 0 24 24">
+          <polyline points="9 18 15 12 9 6" />
+        </svg>
+      </button>
+
+
+      <!-- Delicate Progress Dots -->
+      <div id="slide-dots" class="slide-dots"></div>
+    </div>
+
+
+  </div>
+<!-- Audio Elements with .mp3 and .wav Backups -->
+  <audio id="audio-bg" loop preload="auto">
+    <source src="assets/backgroundmusic.mp3" type="audio/mpeg" />
+    <source src="assets/backgroundmusic.wav" type="audio/wav" />
+  </audio>
+
+  <audio id="audio-door" preload="auto">
+    <source src="audio/glitter sound effect.mp3" type="audio/mpeg" />
+    <source src="audio/glitter sound effect.wav" type="audio/wav" />
+  </audio>
+
+  <audio id="audio-click" preload="auto">
+    <source src="audio/pop.mp3" type="audio/mpeg" />
+    <source src="audio/pop.wav" type="audio/wav" />
+  </audio>
+  <audio id="audio-glitter" preload="auto">
+    <source src="audio/glitter sound effect.mp3" type="audio/mpeg" />
+    <source src="audio/glitter sound effect.wav" type="audio/wav" />
+  </audio>
+
+  <audio id="audio-swipe" preload="auto">
+    <source src="audio/paper turning sound effect.mp3" type="audio/mpeg" />
+    <source src="audio/paper turning sound effect.wav" type="audio/wav" />
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+  <script src="script.js"></script>
+</body>
+</html>
